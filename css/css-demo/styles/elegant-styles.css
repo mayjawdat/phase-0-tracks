@@ -15,7 +15,7 @@ body {
 }
 
 ul {
-  list-style-type: square;
+  list-style-type: circle;
 }
 
 /* You can select multiple tags at once! */
@@ -63,5 +63,4 @@ is nested inside the contact-info section) */
 
 #contact-info p {
   line-height: .8;
-  font-size: .8em;
 }
