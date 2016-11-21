@@ -5,8 +5,6 @@
 # health insurance y/n
 
 
-
-
 puts "What is your name?"
 name1 = gets.chomp
 if name1 == "Drake Cula"
@@ -47,3 +45,13 @@ else
   insurance = false
 end
 
+if age && (bread || insurance)
+  puts "Probably not a vampire."
+elsif !age && (!bread || !insurance)
+  puts "Probably a vampire."
+elsif name1 = false
+  puts "Definitely a vampire."
+else
+  puts "Results inconclusive."
+end
+    
