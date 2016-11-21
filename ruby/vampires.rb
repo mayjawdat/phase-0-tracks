@@ -17,7 +17,7 @@ end
 
 
 puts "How old are you?"
-age = gets.chomp
+age = gets.chomp.to_i
 
 puts "What year were you born?"
 birth_year = gets.chomp
@@ -45,13 +45,13 @@ else
   insurance = false
 end
 
-if age && (bread || insurance)
+if name1 == false
+  puts "Definitely a vampire."
+elsif
+  age && (bread || insurance)
   puts "Probably not a vampire."
 elsif !age && (!bread || !insurance)
   puts "Probably a vampire."
-elsif name1 = false
-  puts "Definitely a vampire."
 else
   puts "Results inconclusive."
 end
-    
