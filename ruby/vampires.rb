@@ -54,6 +54,26 @@ else
   insurance = false
 end
 
+=begin
+
+I could not figure this part out for the life of me.
+
+# ask about allergies
+allergies = ""
+  
+  puts "Please name any allergies and enter 'done' when finished."
+  allergies = gets.chomp
+  until allergies == "done"
+  
+    if allergies == "sunshine"
+      sunshine_allergy = false
+    else
+      sunshine_allergy = true 
+    end
+  end
+
+=end
+
 #results
 if name1 == false
   puts "Definitely a vampire."
@@ -67,4 +87,8 @@ else
 end
 
 employees += 1
+
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
