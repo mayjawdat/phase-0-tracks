@@ -6,13 +6,13 @@
 
 
 
-USCFall2016 = {
+USC_Fall_2016 = {
   horn_management: {
     department: "Horn Management" ,
     classes: [
       "Intro to Protrusions",
-      "Statistics",
-      "Advanced Horn Upkeep"
+      "Advanced Horn Upkeep",
+      "Politics of Pointiness"
     ],
     professors:[
       "Dr. Lollipop",
@@ -22,7 +22,7 @@ USCFall2016 = {
       majors: 12,
       minors: 3
     }
-  }
+  },
 
   glitter_studies: {
     department: "Glitter Studies",
@@ -38,7 +38,7 @@ USCFall2016 = {
       majors: 4,
       minors: 5
     }
-  }
+  },
 
   history_of_rainbows: {
     department: "History of Rainbows",
@@ -46,7 +46,7 @@ USCFall2016 = {
       "Primary Colors 101",
       "Roy G. Biv, American Icon",
       "Controversies in History of Rainbows - Pink",
-      "Intermediate Spectrum Seminar"
+      "Invitation to Crayon Theory"
     ],
     professors: [
       "Dr. Kittens",
@@ -57,7 +57,7 @@ USCFall2016 = {
       majors: 14,
       minors: 6
     }  
-  }
+  },
 
   friendship_science: {
     department: "Friendship Science",
@@ -77,3 +77,10 @@ USCFall2016 = {
     }
   }
 }
+
+
+# Sample Nested Data
+puts USC_Fall_2016[:friendship_science][:classes][2]
+puts USC_Fall_2016[:history_of_rainbows][:professors]
+puts USC_Fall_2016[:glitter_studies][:department]
+puts USC_Fall_2016[:horn_management][:classes].reverse
