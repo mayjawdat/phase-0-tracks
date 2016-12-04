@@ -18,7 +18,12 @@ class Puppy
   end
 
 
+fancy = Puppy.new
+
+
+p fancy.fetch("ball")
+p fancy.speak(3)
+p fancy.roll_over
+p fancy.dog_years(4)
+
 end
-
-
-
