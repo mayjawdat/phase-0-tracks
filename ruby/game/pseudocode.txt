@@ -9,7 +9,6 @@ steps:
 asks for word
 user1 enters word
 gets word
-makes into array
 asks for letter guess
 user2 enters letter
 searches array for letter
