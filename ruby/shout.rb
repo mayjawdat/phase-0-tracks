@@ -15,9 +15,19 @@ module Shout
   end
 
   def excitement(phrase)
-    puts "#{phrase}!"
+  puts "#{phrase}! " * 4
   end
 end
+
+
+class Child
+  include Shout
+end
+
+class Bro
+  include Shout
+end
+
 
 child = Child.new
 child.horror("zombie")
