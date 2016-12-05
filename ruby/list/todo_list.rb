@@ -1,18 +1,28 @@
 class TodoList
+  def initialize(items)
+    @items =items
+  end
 
-  def get_items
-    list = []
+  def get_items 
+     @items 
   end
-  
-  def add_items(item)
-    list << item
+
+  def add_item(item)
+    @items = @items.to_a + ["#{item}"]
+    @items
   end
-  
+
   def delete_item(item)
-    list.delete(item)
+    @items = @items.to_a - ["#{item}"]
+    @items
   end
 
-  def get_item(n)
-  end
+    def get_item(i)
+    @items = @items.to_a
+    # @items = @items.find_index("#{i}")
+    @items = @items[i]
+    @items
+    end
+
 
 end
