@@ -9,7 +9,7 @@ class Santa
     @ethnicity = ethnicity
     reindeer = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
     @reindeer_ranking = reindeer
-    @age = 0
+    @age = 13
   end
 
  def celebrate_age
@@ -24,16 +24,22 @@ end
 phil = Santa.new("female","beige")
 phil.age
 # can't figure out how to add in age initially
+# not really clear on how the reindeer situation is supposed to work
 p phil
+
 phil.gender=("lady")
 phil.celebrate_age
 p phil
 
 
 santas = []
-genders = ["dude", "lady", "dudely lady", "ladylike dude", "badger"]
+genders = ["dude", "lady", "dudely lady", "ladylike dude", "honey badger"]
 ethnicities = ["American", "red-blooded American", "Murrica", "Freedomese"]
 
-genders.length.times do |x|
-  santas << Santa.new(genders[x],ethnicities[x])
+
+300.times do |x|
+  santas << Santa.new(genders.sample,ethnicities.sample)
+  age = 79
 end
+
+p santas
