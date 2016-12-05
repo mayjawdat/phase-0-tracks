@@ -1,0 +1,29 @@
+One user can enter a word (or phrase, if you would like your game to support that), and another user attempts to guess the word.
+Guesses are limited, and the number of guesses available is related to the length of the word.
+Repeated guesses do not count against the user.
+The guessing player receives continual feedback on the current state of the word. So if the secret word is "unicorn", the user will start out seeing something like "_ _ _ _ _ _ _", which would become "_ _ _ c _ _ _" after the user enters a guess of "c".
+The user should get a congratulatory message if they win, and a taunting message if they lose.
+
+
+steps:
+asks for word
+user1 enters word
+gets word
+makes into array
+asks for letter guess
+user2 enters letter
+searches array for letter
+.each letter in array
+if letter in array = letter, prints letter
+if letter in array != letter, prints underscore
+map! update array
+asks for next letter
+repeat
+guess limit = length
+if output = full word, congrats message
+if output != full word, sad message
+
+behaviors/methods: initialize, convert to array, .each over array to find letter, .map update word output
+states/attributes: guess count, is over, word as array
+attr_reader: word, guess count, is over
+attr_accessor: none?
