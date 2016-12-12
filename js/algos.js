@@ -15,5 +15,4 @@ for (var i = 0; i < array.length; i++){
 }
 };
 
-
-//Release 1
+// Unfortunately this is really as far as I got even after working on this for several hours.
