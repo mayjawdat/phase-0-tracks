@@ -7,10 +7,18 @@
 //  = [letter4] + [letter3][letter2][letter1]
 
 
-var str = "the house on the hill";
+var reverse = function(str){
 
-newString =""
+newString ="";
 for (var i = str.length - 1; i >= 0; i--){
   newString = newString + str[i];
 }
 console.log(newString);
+}
+
+reverse("every once in a while")
+reverse("I love lamp")
+
+if(1<3) {
+  console.log(newString);
+}
