@@ -1,0 +1,46 @@
+h1 {
+  background-color: blue;
+  font-family: Helvetica;
+}
+header, footer {
+  background-color: pink;
+}
+
+h2 {
+  font-family: Helvetica;
+}
+ p {
+   font-family: Arial;
+   font-size: 12px;
+   color: yellow;
+ }
+
+body{
+  background-color: white;
+}
+
+.column-1 {
+  display: inline-block;
+  width: 40%;
+  padding: 10px;
+  margin: 15px;
+  vertical-align: top;
+  background-color: green;
+}
+
+.column-1 h2 {
+  color: orange
+}
+
+.column-2 {
+  display: inline-block;
+  width: 40%;
+  padding: 10px;
+  margin: 15px;
+  vertical-align: top;
+  background-color: red;
+}
+
+a:hover {
+  color: white;
+}
