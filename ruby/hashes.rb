@@ -31,4 +31,22 @@ puts "Enter number of rooms:"
 designer_form[:rooms_count] = gets.chomp
 
 puts "Has the deposit been paid?"
-designer_form[:name] = gets.chomp
+designer_form[:deposit_paid] = gets.chomp
+if designer_form[:deposit_paid] == "yes"
+  designer_form[:deposit_paid] = true
+else
+  designer_form[:deposit_paid] = false
+end
+
+puts "Please review your input."
+puts designer_form
+
+puts "Which section would you like to update?"
+section = gets.chomp
+if section != "none"
+  puts "Enter new #{section}:"
+  answer = gets.chomp
+  designer_form[section.to_sym] = "#{answer}"
+end
+
+puts designer_form
