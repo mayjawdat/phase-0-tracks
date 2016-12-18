@@ -14,3 +14,21 @@ designer_form = {
   :rooms_count => [],
   :deposit_paid => []
 }
+
+puts "Enter client name:"
+designer_form[:name] = gets.chomp
+
+puts "Enter age:"
+designer_form[:age] = gets.chomp
+
+puts "Enter number of children:"
+designer_form[:no_of_children] = gets.chomp
+
+puts "Enter decor theme:"
+designer_form[:decor_theme] = gets.chomp
+
+puts "Enter number of rooms:"
+designer_form[:rooms_count] = gets.chomp
+
+puts "Has the deposit been paid?"
+designer_form[:name] = gets.chomp
