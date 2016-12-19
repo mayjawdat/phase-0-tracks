@@ -1,0 +1,30 @@
+Elevator Robot
+
+For each passenger that enters elevator:
+- Ask "What floor?"
+- Listen for answer
+- Convert answer to integer
+- Review elevator buttons until integer = number on button
+- Push button
+
+
+
+Feeding my Cat
+
+Every morning:
+- Check contents of food bowl
+- If food bowl is empty:
+  - Pick up food cup
+  - Until food cup contains 3/4 c dry food:
+    - Scoop dry food using cup
+  - Empty contents of cup into food bowl
+  - Replace food cup
+- Otherwise:
+  - Move on to next step
+
+- Pick up water bowl
+  - Empty contents of water bowl into sink
+  - Turn on faucet
+  - Fill bowl with water until bowl is 3/4 full
+  - Turn off faucet
+  - Place bowl on floor next to food dish

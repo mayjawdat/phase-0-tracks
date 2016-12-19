@@ -1,0 +1,22 @@
+
+.dapper div {
+  position: relative;
+ }
+
+#hat, img {
+  position: absolute;
+  z-index: 1
+}
+
+#octopus, img {
+  top: 60px;
+  left: 25px;
+  position: absolute;
+  z-index: -1
+}
+
+#glasses, img {
+  top: 165px;
+  left: 60px;
+  position: absolute;
+}
