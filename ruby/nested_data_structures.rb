@@ -69,7 +69,7 @@ USC_Fall_2016 = {
     professors: [
       "Dr. Fluffy Clouds",
       "Dr. Overwhelming Exuberance",
-      "Dr. Tickles"
+      "Dr. Snuggles"
     ],
     student_info: {
       majors: 8,
