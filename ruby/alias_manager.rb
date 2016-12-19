@@ -1,41 +1,42 @@
-# spy name
+# get spy name
 # split by names
-# reverse
-# put back together
-# downcase
-# set vowel hash?
-# find vowels
-# if vowels replace with next item in array
-# set consonant array
-# find consonants
-# if consonant replace with next item in array
+# swap names
+# split names into letter arrays
+# use .next for each item in letter array
+# change letter arrays into new name strings
+# put names back together
+# print new name
 
-vowels = ["a","e","i","o","u"]
-string = "Joe Smith"
-char = string.split('').reverse.downcase
-#  name.split(' ').reverse.join('').downcase!
 
-def translate_char(char)
-char.split('').reverse.downcase
-vowels = ["a","e","i","o","u"]
-# something in here to see if any of the elements of char are in the vowels array
-# if so find out the index of the element in the vowels array
-# convert index to integer
-# add 1
-# get vowel at new index
-# new vowel = vowels.values_at("#{vowel}")
-end
-
-# or possibly vowels = {a: e, e: i, i: o, o: u, u: a}
-# vowels[vowel input]
 
 def translate_name(name)
-  char_index = 0
-  while char_index < name.length
-    puts name[char_index]
-    char_index += 1
-  end
+reversed_name = name.split(' ').reverse
+new_first = reversed_name[0].chars.map {|x|
+ x.next
+   }
+new_last = reversed_name[1].chars.map {|x|
+ x.next
+   }
+new_name = "#{new_first.join} #{new_last.join}"
 end
+
+name = ""
+while name != "quit"
+p "What is your real name?"
+name = gets.chomp
+puts translate_name("#{name}")
+end
+# i know that quit part doesn't work yet
+
+
+
+def next_vowel(vowel)
+  vowel_array = ["a","e","i","o","u"]
+  vowel_array.each {|x| x.to_i vowel_array[x + 1]}
+end
+
+
+
 
 # user interface
 puts "What is your real name?"
