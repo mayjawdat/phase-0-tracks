@@ -44,4 +44,4 @@ end
 
 puts fib(100)
 
-# Release 2 - misery
+# Release 2 - ran out of time
