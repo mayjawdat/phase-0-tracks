@@ -20,6 +20,7 @@ new_last = reversed_name[1].chars.map {|x|
 new_name = "#{new_first.join} #{new_last.join}"
 end
 
+# user interface
 name = ""
 while name != "quit"
 p "What is your real name?"
@@ -28,22 +29,8 @@ puts translate_name("#{name}")
 end
 # i know that quit part doesn't work yet
 
-
-
-def next_vowel(vowel)
-  vowel_array = ["a","e","i","o","u"]
-  vowel_array.each {|x| x.to_i vowel_array[x + 1]}
-end
-
-
-
-
-# user interface
-puts "What is your real name?"
-real_name = gets.chomp
-until real_name == "quit"
-puts spy_name(real_name)
-end
+final_list = {}
+final_list.store("#{translate_name(name)}", "#{name}")
 
 final_list.each {|spy_name,real_name|
 puts "#{spy_name} is actually #{real_name}"
