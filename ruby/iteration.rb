@@ -10,6 +10,7 @@ animal_list = {
 
 # array
 safari_animals  = ["giraffe", "hippo", "lion", "rhino"]
+
 puts animal_list
 puts safari_animals
 
@@ -30,8 +31,8 @@ puts "My #{house_animal} make a #{sound.upcase} sound."}
 puts animal_list
 
 puts safari_animals
-safari_animals.map {|animal| animal + "!"}
-puts safari_animals
+new_safari = safari_animals.map {|animal| animal + "!"}
+puts new_safari
 
 puts safari_animals
 safari_animals.map! {|animal| animal + "!"}
