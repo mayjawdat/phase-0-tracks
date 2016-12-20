@@ -29,3 +29,43 @@
 # input: list
 # steps: iterate through list and print out each key/value pair
 # output: string using  \n for line breaks
+
+
+list_of_items = ""
+grocery_list = {}
+
+def create_list(list_hash,initial_items)
+initial_items.split(' ').each  do |item|
+  list_hash[item] = 1
+  end
+end
+
+def add_item(list_hash, new_item, quantity)
+  list_hash[new_item] = quantity
+end
+
+def remove_item(list_hash,item)
+  list_hash.delete(item)
+end
+
+def update_qty(list_hash, item, new_qty)
+  list_hash[item] = new_qty
+end
+
+def print_list(list_hash)
+  list_hash.each do |item, number|
+    puts "Item: #{item}, Quantity: #{number}"
+  end
+end
+
+create_list(grocery_list,list_of_items)
+add_item(grocery_list, "lemonade", 2)
+add_item(grocery_list, "tomatoes", 3)
+add_item(grocery_list, "onions", 1)
+add_item(grocery_list, "ice cream", 4)
+remove_item(grocery_list, "lemonade")
+update_qty(grocery_list, "ice cream", 1)
+print_list(grocery_list)
+
+
+
