@@ -68,4 +68,24 @@ update_qty(grocery_list, "ice cream", 1)
 print_list(grocery_list)
 
 
+=begin
+What did you learn about pseudocode from working on this challenge?
+It really helps to talk the pseudocode ahead of time and get as detailed as possible beforehand. I have an instinct of just barreling forward right away but being forced to slow down and think through each step really helped the code come out better and helped me understand why we were doing what we were doing.
 
+What are the tradeoffs of using arrays and hashes for this challenge?
+We only briefly used an array to build the hash. An array would not have stored the data we needed.
+
+What does a method return?
+A data structure
+
+What kind of things can you pass into methods as arguments?
+hashes, strings, integers (presumably arrays too although we didn't try that), other methods
+
+How can you pass information between methods?
+Use the same arguments between methods.
+
+What concepts were solidified in this challenge, and what concepts are still confusing?
+I felt much more comfortable with pseudocoding after this challenge and I think it will really help me going forward. I can use a similar format and break each method down into the same components (inc. input and output).
+I am still confused about how to use a method as an argument although I'm not sure if we were supposed to cover that since it seems like a whole extra concept.
+
+=end
