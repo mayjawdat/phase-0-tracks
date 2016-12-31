@@ -17,6 +17,10 @@ class Puppy
     human_years * 7
   end
 
+  def initialize
+    puts "Initializing new puppy instance..."
+  end
+
 
 end
 
