@@ -3,12 +3,13 @@ class Santa
   attr_reader :ethnicity
   attr_accessor :age, :gender, :reindeer_array
 
-  def initialize(gender, ethnicity)
+  def initialize(gender, ethnicity, age)
     puts "Initializing Santa instance..."
     @gender = gender
     @ethnicity = ethnicity
     @reindeer_array = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-    @age = 0
+    @age = age
+    puts "Gender: #{gender}, Ethnicity: #{ethnicity}, Age: #{age}"
   end
 
   def speak
@@ -61,6 +62,7 @@ class Santa
 
 end
 
+=begin
 albert = Santa.new("dude-lady", "murrican")
 albert.speak
 albert.eat_milk_and_cookies("chocolate chip cookie")
@@ -71,15 +73,16 @@ p albert.celebrate_birthday
 p albert.reindeer_array
 p albert.get_mad_at("Prancer")
 p albert
-#p albert.reindeer_array
-#p albert.age
-#p albert.ethnicity
+p albert.reindeer_array
+p albert.age
+p albert.ethnicity
+=end
 
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "lady-dude", "gender fluid", "N/A", "dude-lady"]
+example_ethnicities = ["american", "murrican", "freedomese", "West Coloradoan"]
 
-#santas = []
-#santas << Santa.new("lady-dude", "american")
-#santas << Santa.new("dude-lady", "murrican")
-#santas << Santa.new("princess", "freedomese")
+10.times do |i|
+  santas << Santa.new(example_genders.sample, example_ethnicities.sample, rand(140))
+end
 
-
-#p santas[1]
