@@ -1,3 +1,5 @@
+=begin
+
 class Puppy
   def initialize
     puts "Initializing new puppy instance..."
@@ -9,47 +11,57 @@ class Puppy
   end
 
   def speak(num)
-   num.times {|num| puts "Woof!"}
+    num.times {|x| puts "Woof!"}
   end
 
   def roll_over
     puts "*rolls over*"
   end
 
-  def dog_years(x)
-    x * 7
+
+  def dog_years(human_years)
+    human_years * 7
   end
 
-end
-
-fancy = Puppy.new
-
-p fancy.fetch("ball")
-p fancy.speak(3)
-p fancy.roll_over
-p fancy.dog_years(4)
-
-class Lion
   def initialize
-      puts "Initializing new lion instance..."
+    puts "Initializing new puppy instance..."
   end
-  
-  def roar(num)
-    puts "Roar!" * num
+
+end
+
+frida = Puppy.new
+p frida.fetch("ball")
+frida.speak(2)
+frida.roll_over
+p frida.dog_years(4)
+
+=end
+
+class Boat
+
+  def initialize
+    puts "Building new boat..."
   end
-  
-  def jump
-    puts "Jump!"
+
+  def speed(num)
+    puts "The boat is traveling at #{num} knots."
   end
+
+  def sink
+    puts "Oh the humanity!"
+  end
+
 end
 
 
-lion_array = []
-while lion_array.count < 50
-lion_array << Lion.new
+boat_array = []
+while boat_array.count < 50
+  boat_array << Boat.new
 end
 
-lion_array.each {|x| x.roar(2)}
-lion_array.each {|x| x.jump}
+p boat_array
+
+boat_array.each {|x| x.speed(3)}
+boat_array.each {|x| x.sink}
 
 
