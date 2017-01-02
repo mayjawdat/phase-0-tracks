@@ -1,5 +1,8 @@
 class Santa
 
+  attr_reader :ethnicity
+  attr_accessor :age, :gender, :reindeer_array
+
   def initialize(gender, ethnicity)
     puts "Initializing Santa instance..."
     @gender = gender
@@ -16,33 +19,39 @@ class Santa
     puts "That was a good #{cookie_type}!"
   end
 
-  def age
-    @age
-  end
-
-  def age=(new_age)
-    @age = new_age
-  end
-
-  def ethnicity
-    @ethnicity
-  end
+  # getter
+  #def age
+  #  @age
+  #end
+#
+  ## setter
+  #def age=(new_age)
+  #  @age = new_age
+  #end
+#
+  ## getter
+  #def ethnicity
+  #  @ethnicity
+  #end
 
   def celebrate_birthday
     @age = @age + 1
   end
 
-  def gender
-    @gender
-  end
-
-  def gender=(new_gender)
-    @gender = new_gender
-  end
-
-  def reindeer_array
-    @reindeer_array
-  end
+  ## setter
+  #def gender
+  #  @gender
+  #end
+#
+  ## setter
+  #def gender=(new_gender)
+  #  @gender = new_gender
+  #end
+#
+  ## setter
+  #def reindeer_array
+  #  @reindeer_array
+  #end
 
   def get_mad_at(bad_reindeer)
     reindeer_array.delete(bad_reindeer)
@@ -57,11 +66,14 @@ albert.speak
 albert.eat_milk_and_cookies("chocolate chip cookie")
 albert.age = 30
 albert.gender = "cyborg"
-p albert
 puts "Albert self-identifies as a #{albert.gender}."
 p albert.celebrate_birthday
-p albert.get_mad_at("Prancer")
 p albert.reindeer_array
+p albert.get_mad_at("Prancer")
+p albert
+#p albert.reindeer_array
+#p albert.age
+#p albert.ethnicity
 
 
 #santas = []
