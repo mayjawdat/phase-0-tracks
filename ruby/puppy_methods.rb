@@ -1,6 +1,9 @@
 =begin
 
 class Puppy
+  def initialize
+    puts "Initializing new puppy instance..."
+  end
 
   def fetch(toy)
     puts "I brought back the #{toy}!"
@@ -14,6 +17,7 @@ class Puppy
   def roll_over
     puts "*rolls over*"
   end
+
 
   def dog_years(human_years)
     human_years * 7
@@ -59,23 +63,5 @@ p boat_array
 
 boat_array.each {|x| x.speed(3)}
 boat_array.each {|x| x.sink}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
