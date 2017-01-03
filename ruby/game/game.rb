@@ -12,19 +12,12 @@ class Game
   def input_letter
     puts "Player 2, please guess a letter:"
     @letter = gets.chomp
-    @guess_array << @letter
-    p @guess_array
-  end
-
-
-  def input_letter
-    puts "Player 2, please guess a letter:"
-    @letter = gets.chomp
-  
-    if @guess_array.include?("@letter") == true
-      @guess_array.gsub!(@guess_array[@letter], @letter)
-    else
-      @guess_array.gsub(@guess_array[!@letter],"_")
+    @guess_array.map! do |letter|
+      if @guess_array.include?("@letter") == true
+        p @guess_array[@letter]
+      else
+        @guess_array[@letter] = "_"
+      end
     end
   end
 end
