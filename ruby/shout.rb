@@ -1,14 +1,18 @@
-#module Shout
-#  def self.yell_angrily(words)
-#    words + "!!!" + " :("
-#  end
-#
-#  def self.yell_happily(words)
-#    "Fuck yeah," + words + "!!"
-#  end
-#
-#end
+module Shout
+  def self.yell_angrily(words)
+    words + "!!!" + " :("
+  end
 
+  def self.yell_happily(words)
+    "Hell yeah, " + words + "!!"
+  end
+
+end
+
+p Shout.yell_angrily("Grrr")
+p Shout.yell_happily("mashed potatoes")
+
+=begin
 module Shout
   def horror(monster)
     puts "Look out behind you, it's a #{monster}!!"
@@ -36,4 +40,4 @@ child.excitement("Candy")
 bro = Bro.new
 bro.horror("feminist")
 bro.excitement("Sportsball")
-
+=end
