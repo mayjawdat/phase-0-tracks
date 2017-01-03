@@ -12,13 +12,12 @@ it "gets a word inputted" do
 end
 
 it "gets a letter" do
-  expect(game.input_letter).to eq(gets.chomp)
+  expect(game.input_letter).to eq(@letter)
 end
 
 it "replaces letters" do
-  expect(game.word.each).to eq(['_', @letter])
+  expect(game.word).to eq(['_', @letter])
 end
 
-# clearly this is an area i need to work on
 
 end

@@ -1,37 +1,33 @@
 class Game
-  attr_accessor :guess_count
-  attr_accessor :word
+  attr_accessor :guess_count, :word
   attr_reader :word_output
 
 
-  def initialize
-    puts "Welcome to the guessing game!"
+  def initialize(word)
+    @word = word
     @guess_count = 0
-  end
-
-  def input_word
-    puts "Player 1, please enter a word:"
-    @word = gets.chomp
-    @word.split('')
+    @guess_array = word.split
   end
 
   def input_letter
     puts "Player 2, please guess a letter:"
     @letter = gets.chomp
-    @word.each do
-      |x| 
-      if x != @letter
-        print '_'
+    @guess_array.map! do |letter|
+      if @guess_array.include?("@letter") == true
+        p @guess_array[@letter]
       else
-        print @letter
+        @guess_array[@letter] = "_"
       end
     end
-    # can't figure out how to replace elements
   end
 end
 
-game = Game.new
-game.input_word
+
+
+puts "Welcome to the guessing game!"
+puts "Player 1, please enter a word:"
+word = gets.chomp
+game = Game.new(word)
 
 
 while game.guess_count < game.word.length
