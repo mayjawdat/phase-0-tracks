@@ -1,13 +1,20 @@
-#module Shout
-#  def self.yell_angrily(words)
-#    words + "!!!" + " :("
-#  end
-#
-#  def self.yell_happily(words)
-#    "Fuck yeah," + words + "!!"
-#  end
-#
-#end
+=begin
+
+module Shout
+  def self.yell_angrily(words)
+    words + "!!!" + " :("
+  end
+
+  def self.yell_happily(words)
+    "Hell yeah, " + words + "!!"
+  end
+
+end
+
+p Shout.yell_angrily("Grrr")
+p Shout.yell_happily("mashed potatoes")
+
+=end
 
 module Shout
   def horror(monster)
@@ -15,7 +22,7 @@ module Shout
   end
 
   def excitement(phrase)
-  puts "#{phrase}! " * 4
+  puts "#{phrase}! " * 3
   end
 end
 
