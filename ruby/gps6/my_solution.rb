@@ -25,26 +25,28 @@ class VirusPredictor
     print "#{@state} will lose #{@number_of_deaths} people in this outbreak and will spread across the state in #{@speed} months.\n\n"
   end
 
-  private
+private
   # calculates numbers of deaths using variables
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
+    @number_of_deaths = (@population * factor).floor
     if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
+      factor = 0.4
     elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
+      factor = 0.3
     elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
+      factor = 0.2
     elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
+      factor = 0.1
     else
-      number_of_deaths = (@population * 0.05).floor
+      factor = 0.05
     end
-
-
   end
+end
+
   # calculates speed of spread based based on population density and rate
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread
+    #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -60,34 +62,10 @@ class VirusPredictor
     else
       speed += 2.5
     end
-
-
   end
+
 
 end
-=======
- 
-  # Performs calculation for number of deaths, rounds, and prints result
-    def predicted_deaths
-    # predicted deaths is solely based on population density
-      if @population_density >= 200
-        factor = 0.4
-      elsif @population_density >= 150
-        factor = 0.3
-      elsif @population_density >= 100
-        factor = 0.2
-      elsif @population_density >= 50
-        factor = 0.1
-      else
-        factor = 0.05
-      end
-
-      @number_of_deaths = (@population * factor).floor
-
-    end
-  end
-
-
 
 #=======================================================================
 
@@ -128,4 +106,4 @@ STATE_DATA.each do
 
 
 =end
->>>>>>> 7e9f99944c3144f507e3feec2f5102d208098633
+
