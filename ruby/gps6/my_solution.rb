@@ -85,7 +85,8 @@ alaska.virus_effects
 
 STATE_DATA.each do
   |state_name, population_data|
-  state_name = VirusPredictor.new(STATE_DATA.key, STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
+  state = VirusPredictor.new(state_name, population_data[:population_density], population_data[:population])
+  state.virus_effects
   end
 
 #=======================================================================
