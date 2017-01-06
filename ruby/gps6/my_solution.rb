@@ -1,7 +1,7 @@
 # Virus Predictor
 
 # I worked on this challenge with Nathan Vu.
-# We spent [#] hours on this challenge.
+# We spent 3 hours on this challenge.
 
 # EXPLANATION OF require_relative
 # specifies which file to look in for necessary data
@@ -97,13 +97,9 @@ STATE_DATA.each do
 # Reflection Section
 =begin
 1. State data is using string keys, each state's respective hash is using symbol keys.
-2. Require relative specifies information to be included from other files using a relative path. Files included with require are called with paths relative to current working directory, not Ruby file.
+2. Require relative specifies information to be included from other files using a relative path. Files included with require are called with paths relative to current working directory, not Ruby files. Require is more universal.
 3. Each, each pair, each key
-4. They were instance variables and we didn't need to pass anything because the instance were called in the child methods.
-5. Instance scope vs. method scope, Don't Repeat Yourself
-
-
-
-
+4. We didn't need to pass in any parameters because the instance variables were called in the child methods and available throughout the class.
+5. Using instance variables throughout a class, iterating over a hash.
 =end
 
