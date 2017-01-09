@@ -16,9 +16,9 @@ for (var i = str.length - 1; i >= 0; i--){
 console.log(newString);
 }
 
-reverse("every once in a while")
+reverse("the day after tomorrow")
 reverse("I love lamp")
 
-if(1<3) {
+if(2 > 1) {
   console.log(newString);
 }
