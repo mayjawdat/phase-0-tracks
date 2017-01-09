@@ -1,45 +1,44 @@
-var colors = ["pink", "blue", "green", "purple"];
-var names = ["Susan", "Bob", "John", "Amy"];
+var colors = ["red","pink","green","yellow"];
 
-colors.push("red")
-names.push("Horace")
+var names = ["Jerry","Dave","Sprinkles","Rocket"];
 
-var colored_horses = {};
+colors.push("purple");
 
-for (var i=0; i < names.length; i ++) {
-  colored_horses[names[i]] = colors[i];
+names.push("Charles");
+
+console.log(colors);
+console.log(names);
+
+
+var horses = {
+  
 }
 
-console.log(colored_horses)
+for (i = 0; i < names.length; i++) {
+  horses[names[i]] = colors[i]
+}
+
+console.log(horses);
 
 
+function Car(year,make,color,runs) {
 
-function Car(color, make, year) {
-  console.log("New car:", this);
-  this.color = color;
-  this.make = make;
   this.year = year;
-  this.beep = function() {
-    console.log("BEEP!");
-  };
+  this.make = make;
+  this.color = color;
+  this.runs = runs;
+
+  this.honk = function() {
+    console.log("HONK HONK!");
+  }
+
+  console.log("WE BUILT A CAR!")
 }
 
-var car_1 = new Car("red", "VW", 2007);
-console.log(car_1.color);
-console.log(car_1.make);
-console.log(car_1.year);
-car_1.beep()
-console.log("------")
+var greased_lightning = new Car(2001,"Nissan Xterra","Yellow",false)
 
-var car_2 = new Car("black", "Honda", 2010);
-console.log(car_2.color);
-console.log(car_2.make);
-console.log(car_2.year);
-car_2.beep()
-console.log("------")
+var sally = new Car(1969,"Chevy Camaro","Orange",true)
 
-var car_3 = new Car("green", "Ford", 2016);
-console.log(car_3.color);
-console.log(car_3.make);
-console.log(car_3.year);
-car_3.beep()
+greased_lightning.honk()
+sally.honk()
+console.log(sally)
