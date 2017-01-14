@@ -1,0 +1,46 @@
+1. Display the information in one table (either table is fine).
+sqlite> SELECT * FROM cake_flavors;
+1|Strawberry|1|true|1
+2|Espresso|1|true|2
+3|Red Velvet|3|true|3
+4|Pumpkin|2|true|3
+5|Chocolate|4|false|2
+6|Carrot Cake|2|false|3
+7|Salted Caramel|3|false|1
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+sqlite> UPDATE cake_flavors SET dozens=2 WHERE flavor="Espresso";
+sqlite> SELECT * FROM cake_flavors WHERE flavor="Espresso";
+2|Espresso|2|true|2
+
+3. Display the information in both tables using one query.
+sqlite> SELECT * FROM cake_flavors, frosting WHERE cake_flavors.frosting_id = frosting.id;
+1|Strawberry|1|true|1|1|Vanilla
+2|Espresso|2|true|2|2|Chocolate
+3|Red Velvet|3|true|3|3|Cream Cheese
+4|Pumpkin|2|true|3|3|Cream Cheese
+5|Chocolate|4|false|2|2|Chocolate
+6|Carrot Cake|2|false|3|3|Cream Cheese
+7|Salted Caramel|3|false|1|1|Vanilla
+
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+sqlite> SELECT cake_flavors.flavor, frosting.flavor FROM cake_flavors JOIN frosting ON cake_flavors.frosting_id = frosting.id;
+Strawberry|Vanilla
+Espresso|Chocolate
+Red Velvet|Cream Cheese
+Pumpkin|Cream Cheese
+Chocolate|Chocolate
+Carrot Cake|Cream Cheese
+Salted Caramel|Vanilla
+
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+sqlite> DELETE FROM cake_flavors WHERE flavor="Chocolate";
+sqlite> SELECT * FROM cake_flavors;
+1|Strawberry|1|true|1
+2|Espresso|2|true|2
+3|Red Velvet|3|true|3
+4|Pumpkin|2|true|3
+6|Carrot Cake|2|false|3
+7|Salted Caramel|3|false|1
