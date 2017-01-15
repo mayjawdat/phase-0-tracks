@@ -45,3 +45,47 @@ sqlite> SELECT * FROM cake_flavors;
 6|Carrot Cake|2|false|3
 7|Salted Caramel|3|false|1
 
+LEFT JOIN #1
+sqlite> SELECT cake_flavors.flavor, frosting.flavor
+   ...> FROM cake_flavors
+   ...> LEFT JOIN frosting
+   ...> ON cake_flavors.frosting_id = frosting.id;
+Strawberry|Vanilla
+Espresso|Chocolate
+Red Velvet|Cream Cheese
+Pumpkin|Cream Cheese
+Carrot Cake|Cream Cheese
+Salted Caramel|Vanilla
+
+LEFT JOIN #2
+sqlite> SELECT cake_flavors.dozens, frosting.flavor
+   ...> FROM cake_flavors
+   ...> LEFT JOIN frosting
+   ...> ON cake_flavors.frosting_id = frosting.id
+   ...> WHERE frosting.flavor = "Cream Cheese";
+3|Cream Cheese
+2|Cream Cheese
+2|Cream Cheese
+
+INNER JOIN
+sqlite> SELECT cake_flavors.flavor, frosting.flavor
+   ...> FROM cake_flavors
+   ...> INNER JOIN frosting
+   ...> ON cake_flavors.frosting_id = frosting.id
+   ...> WHERE cake_flavors.sprinkles = "true";
+Strawberry|Vanilla
+Espresso|Chocolate
+Red Velvet|Cream Cheese
+Pumpkin|Cream Cheese
+
+INNER JOIN #2
+sqlite> SELECT cake_flavors.flavor, frosting.flavor
+   ...> FROM cake_flavors
+   ...> INNER JOIN frosting
+   ...> ON cake_flavors.frosting_id = frosting.id;
+Strawberry|Vanilla
+Espresso|Chocolate
+Red Velvet|Cream Cheese
+Pumpkin|Cream Cheese
+Carrot Cake|Cream Cheese
+Salted Caramel|Vanilla
