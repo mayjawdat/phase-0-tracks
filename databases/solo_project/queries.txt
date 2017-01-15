@@ -44,3 +44,4 @@ sqlite> SELECT * FROM cake_flavors;
 4|Pumpkin|2|true|3
 6|Carrot Cake|2|false|3
 7|Salted Caramel|3|false|1
+
