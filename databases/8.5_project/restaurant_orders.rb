@@ -3,15 +3,15 @@ db = SQLite3::Database.new("restaurant.db")
 # db.results_as_hash = true
 
 create_table_cmd = <<-SQL
-  CREATE TABLE IF NOT EXISTS ingredients(
-    id INTEGER PRIMARY KEY,
-    pasta_id int,
-    sauce_id int,
-    cheese_id int,
-    FOREIGN KEY (pasta_id) REFERENCES pasta(id),
-    FOREIGN KEY (sauce_id) REFERENCES sauce(id),
-    FOREIGN KEY (cheese_id) REFERENCES cheese(id),
-  )
+  #CREATE TABLE IF NOT EXISTS ingredients(
+  #  id INTEGER PRIMARY KEY,
+  #  pasta_id int,
+  #  sauce_id int,
+  #  cheese_id int,
+  #  FOREIGN KEY (pasta_id) REFERENCES pasta(id),
+  #  FOREIGN KEY (sauce_id) REFERENCES sauce(id),
+  #  FOREIGN KEY (cheese_id) REFERENCES cheese(id),
+  #)
 
   CREATE TABLE IF NOT EXISTS pasta(
     id INTEGER PRIMARY KEY,
