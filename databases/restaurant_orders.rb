@@ -30,3 +30,21 @@ reservations for tomorrow
 
 Back end input
 amount to order maps to supplier list (nested hash)
+
+
+
+Create menu data structure
+menu = {
+  :dish_name,
+  :ingredients = {
+  :ingredient = amount
+  }
+}
+
+Create supplier data structure
+suppliers = {
+  :supplier_name,
+  items_sold = {
+  :ingredient = unit price
+  }
+}
