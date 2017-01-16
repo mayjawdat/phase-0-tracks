@@ -60,15 +60,17 @@ db.execute(create_table_cheese)
 
 update_table("pasta", pasta_hash[:name], pasta_hash[:unit_price])
 
-#CREATE TABLE IF NOT EXISTS ingredients(
-  #  id INTEGER PRIMARY KEY,
-  #  pasta_id int,
-  #  sauce_id int,
-  #  cheese_id int,
-  #  FOREIGN KEY (pasta_id) REFERENCES pasta(id),
-  #  FOREIGN KEY (sauce_id) REFERENCES sauce(id),
-  #  FOREIGN KEY (cheese_id) REFERENCES cheese(id),
-  #)
+create_ingredients_table = <<-SQL
+CREATE TABLE IF NOT EXISTS ingredients(
+   id INTEGER PRIMARY KEY,
+   pasta_id int,
+   sauce_id int,
+   cheese_id int,
+   FOREIGN KEY (pasta_id) REFERENCES pasta(id),
+   FOREIGN KEY (sauce_id) REFERENCES sauce(id),
+   FOREIGN KEY (cheese_id) REFERENCES cheese(id)
+ )
+ SQL
 
 
 
@@ -95,6 +97,9 @@ Menu
 
 
 Covers
+- User enters # of covers
+- Generate that many instances
+- Count # of each ingredient used
 - Dishes ordered * quantities per ingredient = amount sold
 - Dishes ordered as % of total ordered
 - Reservations for next service
@@ -103,14 +108,16 @@ Covers
 amount needed + amount sold = amount to order
 
 User inputs
-total covers today
+total covers today - generates random dishes covers.times
 # of dishes sold
 reservations for tomorrow
 
 Back end input
 amount to order maps to supplier list (nested hash)
 
-
+todays_orders = {}
+10.times do |i|
+  todays_orders << Order.new(pasta_hash.sample, sauce_hash.sample, cheese_hash.sample)
 
 Create menu data structure
 menu = {
