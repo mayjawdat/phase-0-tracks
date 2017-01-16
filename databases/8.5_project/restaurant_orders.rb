@@ -1,4 +1,53 @@
+=begin
+
+Premise
+- Restaurant serves dish with 1 each pasta/sauce/cheese
+- Every day need to order new ingredients from suppliers based on what was sold that day
+- User inputs number of customers served today
+- Program calculates ingredients used
+- User inputs reservations for tomorrow
+- Program calculates ingredients needed for tomorrow
+- Combined total for each ingredient is fed into order form
+- Order is generated for each supplier, including cost total
+- Using contact info order is submitted to each supplier
+
+Daily inventory order
+Suppliers table
+- Supplier
+- Item
+- Unit price
+- Total
+- Contact info
+
+Ingredients table
+- Name of individual ingredient
+- Unit price
+
+Covers
+- User enters # of covers (diners) today
+- Generate that many instances with random input from each 3 ingredient categories
+- Count # of each ingredient used
+- Dishes ordered * quantities per ingredient = amount sold
+- Dishes ordered as % of total ordered
+- Reservations for next service
+- % * covers -> # of each dish -> * ingredients -> amount needed
+
+amount needed + amount sold = amount to order
+
+User inputs
+total covers today
+reservations for tomorrow
+
+Back end input
+amount to order maps to supplier list (nested hash)
+
+=end
+
+
+
+
 require 'sqlite3'
+require_relative 'order_class'
 
 
 db = SQLite3::Database.new("restaurant.db")
@@ -76,62 +125,3 @@ CREATE TABLE IF NOT EXISTS ingredients(
 
 
 
-
-
-
-
-=begin
-
-Daily inventory order
-Suppliers table
-- Supplier
-- Item
-- Unit price
-- Total
-- Contact info
-
-Menu
-- Dishes
-- Ingredients
-- Quantities per ingredient
-
-
-Covers
-- User enters # of covers
-- Generate that many instances
-- Count # of each ingredient used
-- Dishes ordered * quantities per ingredient = amount sold
-- Dishes ordered as % of total ordered
-- Reservations for next service
-- % * covers -> # of each dish -> * ingredients -> amount needed
-
-amount needed + amount sold = amount to order
-
-User inputs
-total covers today - generates random dishes covers.times
-# of dishes sold
-reservations for tomorrow
-
-Back end input
-amount to order maps to supplier list (nested hash)
-
-todays_orders = {}
-10.times do |i|
-  todays_orders << Order.new(pasta_hash.sample, sauce_hash.sample, cheese_hash.sample)
-
-Create menu data structure
-menu = {
-  :pasta
-  :sauce
-  :cheese
-}
-
-Create supplier data structure
-suppliers = {
-  :supplier_name,
-  :items_sold = {
-  :ingredient = unit price
-  }
-  :contact_info
-}
-=end

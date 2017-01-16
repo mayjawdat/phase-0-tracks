@@ -12,9 +12,7 @@ end
 
 
 pastas = ["penne", "rotini", "pappardelle"]
-
 sauces = ["bolognese", "pesto", "alfredo"]
-
 cheeses = ["mozzarella", "parmesan", "fontina"]
 
 
@@ -39,8 +37,3 @@ cheese_hash = {
   name: ["mozzarella", "parmesan", "fontina"],
   unit_price: [2, 1, 1.5]
 }
-
-#todays_orders.each do |pasta, sauce, cheese|
-#  cost = pasta_hash[:name] + sauce_hash[:name] + cheese_hash[:name]
-#  p cost
-#end#
