@@ -21,7 +21,7 @@ get '/great_job' do
   "Good job, #{params[:name]}"
   else
   "Good job!"
-end
+  end
 end
 
 # write a GET route with
