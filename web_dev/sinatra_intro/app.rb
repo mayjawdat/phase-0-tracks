@@ -14,11 +14,15 @@ end
 
 get '/contact' do
   "123 Fake St. Springfield, America"
-
-get '/great_job' do
-  "Good job, #{params[:name]}"
 end
 
+get '/great_job' do
+  if name
+  "Good job, #{params[:name]}"
+  else
+  "Good job!"
+end
+end
 
 # write a GET route with
 # route parameters
@@ -26,6 +30,13 @@ get '/about/:person' do
   person = params[:person]
   "#{person} is a programmer, and #{person} is learning Sinatra."
 end
+
+get '/about/:number_1/adds/:number_2' do
+  number_1 = params[:number_1]
+  number_2 = params[:number_2]
+  "#{params[:number_1]} + #{params[:number_2]}"
+end
+
 
 get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
